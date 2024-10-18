@@ -1,0 +1,79 @@
+﻿@model IEnumerable<AnimeListandUserList.Models.AnimeContent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Add New Anime</a>
+</p>
+<p>
+    <a asp-action="Edit">Edit a Anime</a>
+</p>
+<p>
+    <a asp-action="Delete">Delete a Anime</a>
+</p>
+<p>
+    <a asp-action="Details">Search for an Anime</a>
+</p>
+<br>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.studio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.releasedate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.episodes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.summary)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.releasedate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.episodes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summary)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,63 @@
+﻿@model AnimeListandUserList.Models.AnimeContent
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit a Anime</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="title" class="control-label"></label>
+                <input asp-for="title" class="form-control" />
+                <span asp-validation-for="title" class="text-danger"></span><br>
+            </div>
+            <div class="form-group">
+                <label asp-for="studio" class="control-label"></label>
+                <input asp-for="studio" class="form-control" />
+                <span asp-validation-for="studio" class="text-danger"></span><br>
+            </div>
+            <div class="form-group">
+                <label asp-for="releasedate" class="control-label"></label>
+                <input asp-for="releasedate" class="form-control" />
+                <span asp-validation-for="releasedate" class="text-danger"></span><br>
+            </div>
+            <div class="form-group">
+                <label asp-for="status" class="control-label"></label>
+                <input asp-for="status" class="form-control" />
+                <span asp-validation-for="status" class="text-danger"></span><br>
+            </div>
+            <div class="form-group">
+                <label asp-for="genre" class="control-label"></label>
+                <input asp-for="genre" class="form-control" />
+                <span asp-validation-for="genre" class="text-danger"></span><br>
+            </div>
+            <div class="form-group">
+                <label asp-for="episodes" class="control-label"></label>
+                <input asp-for="episodes" class="form-control" />
+                <span asp-validation-for="episodes" class="text-danger"></span><br>
+            </div>
+            <div class="form-group">
+                <label asp-for="summary" class="control-label"></label>
+                <input asp-for="summary" class="form-control" />
+                <span asp-validation-for="summary" class="text-danger"></span><br>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,30 @@
+﻿@model AnimeListandUserList.Models.AnimeContent
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete a anime</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.title)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete" method="post">
+        <input type="text" name="title" placeholder="Enter Title" /><br><br>
+        <input type="submit" value="Delete" class="btn btn-danger" /><br>
+      
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
