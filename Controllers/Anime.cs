@@ -25,12 +25,6 @@ namespace AnimeListandUserList.Controllers
             return View(anime);
         }
 
-        // GET: Anime/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
         // GET: Anime/Create
         public ActionResult Create()
         {

@@ -1,7 +1,8 @@
 ﻿namespace AnimeListandUserList.Models
 {
-    public class OwnerContent
+    public class Owner
     {
+       
         public string username { get; set; }
         public string password { get; set; }
     }
