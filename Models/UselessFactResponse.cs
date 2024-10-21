@@ -3,6 +3,6 @@
     public class UselessFactResponse
     {
             public string Status { get; set; }
-            public Ducks Data { get; set; }
+            public YesNo Data { get; set; }
         }
     }

@@ -9,7 +9,7 @@ using System.Net.Http.Headers;
 
 namespace AnimeListandUserList.Controllers
 {
-    public class Image : Controller
+    public class Random : Controller
     {
         public async Task<IActionResult> Index()
         {
@@ -21,7 +21,7 @@ namespace AnimeListandUserList.Controllers
                 if (response.IsSuccessStatusCode)
                 {
                     var result = await response.Content.ReadAsStringAsync();
-                    var yesNoResponse = JsonConvert.DeserializeObject<Ducks>(result);
+                    var yesNoResponse = JsonConvert.DeserializeObject<YesNo>(result);
                     return View(yesNoResponse); // Pass the model to the view
                 }
                 return View(null); // Handle error case

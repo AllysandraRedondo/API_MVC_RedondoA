@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AnimeListandUserList.Models
 {
-    public class Ducks
+    public class YesNo
     {
         public string Answer { get; set; }
         public bool Forced { get; set; }
